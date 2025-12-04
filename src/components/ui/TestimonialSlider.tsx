@@ -46,35 +46,77 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
 
   return (
     <div className="relative max-w-7xl mx-auto px-4">
-      <div className="relative overflow-hidden h-[320px]">
-        <div className="flex items-stretch gap-4 md:gap-6 relative h-full">
+      <div className="relative h-[320px] overflow-hidden">
+        <div className="relative h-full w-full flex items-stretch gap-4 md:gap-6">
           {visibleTestimonials.map((testimonial, cardIndex) => {
             const position = getCardPosition(cardIndex);
             const isMiddle = position === 1;
             
-            const flexOrder = position + 1;
+            // Calculate how many positions the card needs to move
+            // cardIndex is the DOM position (0, 1, 2)
+            // position is the target visual position (0=left, 1=middle, 2=right)
+            const positionDiff = position - cardIndex;
+            
+            // Calculate translateX: each position shift = 100% of card width + gap
+            // translateX percentage is relative to the element's own width
+            // Gap is approximately 1rem (16px) on mobile, 1.5rem (24px) on desktop
+            let translateX: string | number = 0;
+            if (positionDiff !== 0) {
+              if (positionDiff === 1) {
+                translateX = 'calc(100% + 1.5rem)';
+              } else if (positionDiff === 2) {
+                translateX = 'calc(200% + 3rem)';
+              } else if (positionDiff === -1) {
+                translateX = 'calc(-100% - 1.5rem)';
+              } else if (positionDiff === -2) {
+                translateX = 'calc(-200% - 3rem)';
+              }
+            }
             
             return (
               <motion.div
                 key={testimonial.id}
                 initial={false}
                 animate={{
-                  order: flexOrder,
-                  opacity: isMiddle ? 2 : 1,
-                  zIndex: isMiddle ? 2 : 1,
+                  x: translateX,
+                  scale: isMiddle ? 1 : 0.95,
+                  opacity: isMiddle ? 1 : 0.75,
+                  zIndex: isMiddle ? 10 : position === 0 ? 1 : 2,
                 }}
                 transition={{
-                  type: 'spring',
-                  stiffness: 300,
-                  damping: 30,
-                  duration: 0.5,
+                  x: {
+                    type: 'spring',
+                    stiffness: 200,
+                    damping: 25,
+                    mass: 0.8,
+                  },
+                  scale: {
+                    type: 'spring',
+                    stiffness: 200,
+                    damping: 25,
+                    mass: 0.8,
+                  },
+                  opacity: {
+                    type: 'spring',
+                    stiffness: 200,
+                    damping: 25,
+                    mass: 0.8,
+                  },
                 }}
                 className="flex-1 w-full h-full min-w-0"
-                style={{
-                  order: flexOrder,
-                }}
               >
-                <div className="bg-gray-900 rounded-2xl shadow-xl p-6 md:p-8 h-full w-full flex flex-col min-h-0">
+                <motion.div 
+                  className="bg-gray-900 rounded-2xl shadow-xl p-6 md:p-8 h-full w-full flex flex-col min-h-0"
+                  animate={{
+                    y: isMiddle ? 0 : 8,
+                  }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 200,
+                    damping: 25,
+                    mass: 0.8,
+                  }}
+                >
                   <Quote className="w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] text-primary-600 mb-4 flex-shrink-0" />
                   <p className="text-base md:text-lg text-white mb-2 leading-relaxed">
                     "{testimonial.text}"
@@ -93,7 +135,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
                       {testimonial.type === 'client' ? 'Client' : 'Student'}
                     </span>
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
             );
           })}
