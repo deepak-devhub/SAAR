@@ -55,7 +55,7 @@ export default function About() {
 
       {/* Intro Text */}
       <Section>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,25 +64,27 @@ export default function About() {
             transition={{ duration: 0.4 }}
             className="prose prose-lg max-w-none"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6 text-center">
               Overview of SAAR Group
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              SAAR Group of Companies is a multidisciplinary organization with a strong presence 
-              in both the United Arab Emirates and India. We operate through two distinct yet 
-              complementary divisions that work together to advance the MEP engineering industry.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              Our Engineering Consultancy division delivers cutting-edge MEP design solutions 
-              for commercial, industrial, and infrastructure projects. Our MEP Academy division 
-              provides comprehensive technical training programs that bridge the gap between 
-              academic knowledge and industry requirements.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              Together, we create a complete ecosystem that not only designs and delivers 
-              exceptional engineering solutions but also develops the talent needed to sustain 
-              and grow the industry for years to come.
-            </p>
+            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+              <p className="text-left md:text-justify break-words">
+                SAAR Group of Companies is a multidisciplinary organization with a strong presence 
+                in both the United Arab Emirates and India. We operate through two distinct yet 
+                complementary divisions that work together to advance the MEP engineering industry.
+              </p>
+              <p className="text-left md:text-justify break-words">
+                Our Engineering Consultancy division delivers cutting-edge MEP design solutions 
+                for commercial, industrial, and infrastructure projects. Our MEP Academy division 
+                provides comprehensive technical training programs that bridge the gap between 
+                academic knowledge and industry requirements.
+              </p>
+              <p className="text-left md:text-justify break-words">
+                Together, we create a complete ecosystem that not only designs and delivers 
+                exceptional engineering solutions but also develops the talent needed to sustain 
+                and grow the industry for years to come.
+              </p>
+            </div>
           </motion.div>
         </div>
       </Section>
@@ -140,7 +142,7 @@ export default function About() {
 
       {/* Director's Message */}
       <Section>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <Card>
             <div className="md:flex gap-8 p-8">
               <div className="flex-shrink-0 mb-6 md:mb-0">

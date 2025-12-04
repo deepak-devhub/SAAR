@@ -88,7 +88,7 @@ export default function Academy() {
 
       {/* Intro Section */}
       <Section>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -96,24 +96,26 @@ export default function Academy() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.4 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6">About SAAR MEP Academy</h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              SAAR MEP Academy, based in Thrissur, Kerala, India, is dedicated to providing 
-              comprehensive technical training in MEP design and engineering. Our mission is 
-              to bridge the gap between academic knowledge and industry requirements, preparing 
-              students for successful careers in the MEP industry.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              We offer a wide range of courses from professional diplomas to specialized 
-              training programs, all designed with industry input to ensure relevance and 
-              practical applicability. Our curriculum combines theoretical knowledge with 
-              hands-on project experience, giving students the confidence and skills needed 
-              to excel in their careers.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              With certified faculty, industry partnerships, and placement support, SAAR MEP 
-              Academy is your gateway to a successful career in MEP engineering.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6 text-center">About SAAR MEP Academy</h2>
+            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+              <p className="text-left md:text-justify break-words">
+                SAAR MEP Academy, based in Thrissur, Kerala, India, is dedicated to providing 
+                comprehensive technical training in MEP design and engineering. Our mission is 
+                to bridge the gap between academic knowledge and industry requirements, preparing 
+                students for successful careers in the MEP industry.
+              </p>
+              <p className="text-left md:text-justify break-words">
+                We offer a wide range of courses from professional diplomas to specialized 
+                training programs, all designed with industry input to ensure relevance and 
+                practical applicability. Our curriculum combines theoretical knowledge with 
+                hands-on project experience, giving students the confidence and skills needed 
+                to excel in their careers.
+              </p>
+              <p className="text-left md:text-justify break-words">
+                With certified faculty, industry partnerships, and placement support, SAAR MEP 
+                Academy is your gateway to a successful career in MEP engineering.
+              </p>
+            </div>
           </motion.div>
         </div>
       </Section>
@@ -182,8 +184,34 @@ export default function Academy() {
         </div>
       </Section>
 
+            {/* CTAs */}
+            <Section background="gray">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6">
+            Start Your Journey Today
+          </h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Take the first step towards a successful career in MEP engineering
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact">
+              <Button variant="secondary" className="w-full sm:w-auto">
+                <FileText className="w-5 h-5 mr-2 inline" />
+                View Course Details
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="primary" className="w-full sm:w-auto">
+                Apply Now
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </Section>
+
       {/* Testimonials */}
-      <Section background="gray">
+      <Section >
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-4">Student Testimonials</h2>
         </div>
@@ -221,10 +249,10 @@ export default function Academy() {
           <div className="flex justify-center items-center gap-4 mt-8">
             <button
               onClick={prevTestimonial}
-              className="p-2 rounded-full bg-secondary-900 shadow-md hover:bg-gold-500 transition-colors"
+              className="group p-2 rounded-full bg-secondary-900 shadow-md hover:bg-gold-500 transition-colors"
               aria-label="Previous testimonial"
             >
-              <ChevronLeft className="w-6 h-6 text-primary-600 hover:text-black" />
+              <ChevronLeft className="w-6 h-6 text-primary-600 group-hover:text-black transition-colors" />
             </button>
             <div className="flex gap-2">
               {studentTestimonials.map((_, index) => (
@@ -240,40 +268,16 @@ export default function Academy() {
             </div>
             <button
               onClick={nextTestimonial}
-              className="p-2 rounded-full bg-secondary-900 shadow-md hover:bg-gold-500 transition-colors"
+              className="group p-2 rounded-full bg-secondary-900 shadow-md hover:bg-gold-500 transition-colors"
               aria-label="Next testimonial"
             >
-              <ChevronRight className="w-6 h-6 text-primary-600 hover:text-black" />
+              <ChevronRight className="w-6 h-6 text-primary-600 group-hover:text-black transition-colors" />
             </button>
           </div>
         </div>
       </Section>
 
-      {/* CTAs */}
-      <Section>
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6">
-            Start Your Journey Today
-          </h2>
-          <p className="text-lg text-gray-300 mb-8">
-            Take the first step towards a successful career in MEP engineering
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button variant="secondary" className="w-full sm:w-auto">
-                <FileText className="w-5 h-5 mr-2 inline" />
-                View Course Details
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button variant="primary" className="w-full sm:w-auto">
-                Apply Now
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </Section>
+
     </>
   );
 }

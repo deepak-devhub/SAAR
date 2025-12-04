@@ -98,7 +98,7 @@ export default function Projects() {
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 filter === filterType
                   ? 'bg-primary-600 text-white'
-                  : 'bg-gray-900 text-gray-300 hover:bg-primary-600'
+                  : 'bg-secondary-900 text-gray-300 hover:bg-primary-600'
               }`}
             >
               {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
@@ -152,7 +152,7 @@ export default function Projects() {
       </Section>
 
       {/* CTA */}
-      <Section >
+      <Section className="!pt-8 md:!pt-12">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6">
             Have a Project in Mind?

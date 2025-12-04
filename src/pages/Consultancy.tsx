@@ -69,7 +69,7 @@ export default function Consultancy() {
 
       {/* About Section */}
       <Section>
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -77,23 +77,25 @@ export default function Consultancy() {
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.4 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6">About Our Consultancy</h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              SAAR Engineering Consultancy LLC is a leading MEP engineering firm based in 
-              Sharjah Media City, UAE, with extensive experience delivering comprehensive 
-              mechanical, electrical, and plumbing design solutions for projects across 
-              the UAE and India.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed mb-4">
-              Our team of experienced engineers brings over 15 years of combined expertise 
-              in designing sustainable, code-compliant MEP systems for commercial, industrial, 
-              and infrastructure projects. We are committed to delivering innovative solutions 
-              that optimize performance, reduce costs, and minimize environmental impact.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              <strong>Credentials:</strong> Licensed engineering consultancy with certifications 
-              in sustainable design, BIM coordination, and international code compliance.
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6 text-center">About Our Consultancy</h2>
+            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+              <p className="text-left md:text-justify break-words">
+                SAAR Engineering Consultancy LLC is a leading MEP engineering firm based in 
+                Sharjah Media City, UAE, with extensive experience delivering comprehensive 
+                mechanical, electrical, and plumbing design solutions for projects across 
+                the UAE and India.
+              </p>
+              <p className="text-left md:text-justify break-words">
+                Our team of experienced engineers brings over 15 years of combined expertise 
+                in designing sustainable, code-compliant MEP systems for commercial, industrial, 
+                and infrastructure projects. We are committed to delivering innovative solutions 
+                that optimize performance, reduce costs, and minimize environmental impact.
+              </p>
+              <p className="text-left md:text-justify break-words">
+                <strong>Credentials:</strong> Licensed engineering consultancy with certifications 
+                in sustainable design, BIM coordination, and international code compliance.
+              </p>
+            </div>
           </motion.div>
         </div>
       </Section>

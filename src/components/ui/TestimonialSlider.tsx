@@ -61,10 +61,10 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
       <div className="flex justify-center items-center gap-4 mt-8">
         <button
           onClick={prev}
-            className="p-2 rounded-full bg-gray-900 shadow-md hover:bg-primary-600 transition-colors"
+          className="group p-2 rounded-full bg-gray-900 shadow-md hover:bg-primary-600 transition-colors"
           aria-label="Previous testimonial"
         >
-          <ChevronLeft className="w-6 h-6 text-primary-600 hover:text-white" />
+          <ChevronLeft className="w-6 h-6 text-primary-600 group-hover:text-white transition-colors" />
         </button>
         <div className="flex gap-2">
           {testimonials.map((_, index) => (
@@ -80,10 +80,10 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
         </div>
         <button
           onClick={next}
-          className="p-2 rounded-full bg-gray-900 shadow-md hover:bg-primary-600 transition-colors"
+          className="group p-2 rounded-full bg-gray-900 shadow-md hover:bg-primary-600 transition-colors"
           aria-label="Next testimonial"
         >
-          <ChevronRight className="w-6 h-6 text-primary-600 hover:text-white" />
+          <ChevronRight className="w-6 h-6 text-primary-600 group-hover:text-white transition-colors" />
         </button>
       </div>
     </div>
