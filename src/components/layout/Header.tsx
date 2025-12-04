@@ -23,25 +23,25 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gold-800/20 shadow-lg shadow-gold-900/10">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20 min-h-[80px]">
           {/* Logo */}
-          <Link to="/home" className="flex items-center space-x-3 group">
+          <Link to="/home" className="flex ms-4 items-center justify-center group flex-shrink-0 px-4 py-2">
             <motion.img
               src={logoImage}
               alt="SAAR MEP Academy"
-              className="h-12 w-auto object-contain"
+              className="h-auto max-h-12 w-auto object-contain"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center justify-center space-x-8 flex-1">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                className={`px-3 py-2 text-sm font-medium transition-colors flex items-center ${
                   isActive(item.href)
                     ? 'text-gold-500 border-b-2 border-gold-500'
                     : 'text-gray-300 hover:text-gold-400'
@@ -53,13 +53,13 @@ export default function Header() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link to="/consultancy">
+          <div className="hidden lg:flex items-center justify-center space-x-4 flex-shrink-0">
+            <Link to="/consultancy" className="flex items-center">
               <Button variant="outline" className="text-sm">
                 Explore Consultancy
               </Button>
             </Link>
-            <Link to="/academy">
+            <Link to="/academy" className="flex items-center">
               <Button variant="primary" className="text-sm">
                 Visit Academy
               </Button>
@@ -69,7 +69,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-300 hover:text-gold-400"
+            className="lg:hidden p-2 rounded-md text-gray-300 hover:text-gold-400 flex items-center justify-center flex-shrink-0"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
@@ -103,13 +103,13 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4 space-y-2 border-t">
-                <Link to="/divisions#consultancy" onClick={() => setMobileMenuOpen(false)}>
+              <div className="pt-4 px-3 space-y-4 border-t border-gray-800">
+                <Link to="/consultancy" onClick={() => setMobileMenuOpen(false)} className="block">
                   <Button variant="outline" className="w-full text-sm">
                     Explore Consultancy
                   </Button>
                 </Link>
-                <Link to="/divisions#academy" onClick={() => setMobileMenuOpen(false)}>
+                <Link to="/academy" onClick={() => setMobileMenuOpen(false)} className="block">
                   <Button variant="primary" className="w-full text-sm">
                     Visit Academy
                   </Button>
