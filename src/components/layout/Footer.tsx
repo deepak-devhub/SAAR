@@ -114,21 +114,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="text-center text-sm space-y-2">
-            <p className="text-white font-semibold">
-              © 2025 SAAR Group of Companies. All Rights Reserved.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-gray-400">
+        <div className="border-t border-gray-800 mt-8 pt-6">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500 italic">
+            <div className="flex flex-col sm:flex-row items-center sm:gap-2">
               <span>SAAR Engineering Consultancy</span>
               <span className="hidden sm:inline">|</span>
               <span>SAAR MEP Academy</span>
             </div>
-            <p className="text-gray-500 italic">
+            <p className="text-center">
               Designed for Excellence in Engineering & Education
+            </p>
+            <p className="text-center sm:text-right">
+              © 2025 SAAR Group of Companies. All Rights Reserved.
             </p>
           </div>
         </div>
+        
       </div>
     </footer>
   );
