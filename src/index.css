@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-black text-white;
+  }
+  
+  /* Custom scrollbar styling - matches gold/black theme */
+  html {
+    overflow-y: overlay; /* Overlay scrollbar - doesn't take width */
+    scrollbar-width: thin; /* Firefox: Show thin scrollbar by default */
+    scrollbar-color: rgba(244, 196, 48, 0.5) transparent; /* Firefox: Gold thumb, transparent track */
+  }
+  
+  /* Chrome, Safari, Opera - Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px; /* Visible by default */
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track - overlays content */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(244, 196, 48, 0.5); /* Gold color matching theme */
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.3); /* Subtle border for definition */
+    transition: background 0.2s ease;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(244, 196, 48, 0.8); /* Brighter gold on hover */
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+}
