@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import { useEffect, ReactNode } from 'react';
+import { useEffect } from 'react';
+import type { ReactNode } from 'react';
 import Layout from './components/layout/Layout';
 import Landing from './pages/Landing';
 import Home from './pages/Home';
@@ -22,7 +23,7 @@ const pageVariants = {
     scale: 1,
     transition: {
       duration: 0.4,
-      ease: [0.25, 0.1, 0.25, 1], // Smooth cinematic easing
+      ease: [0.25, 0.1, 0.25, 1] as const, // Smooth cinematic easing
     },
   },
   exit: {
@@ -30,7 +31,7 @@ const pageVariants = {
     scale: 1.01,
     transition: {
       duration: 0.3,
-      ease: 'easeOut',
+      ease: 'easeOut' as const,
     },
   },
 };

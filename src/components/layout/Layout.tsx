@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 interface LayoutProps {
-  children: ReactNode;
+  children?: ReactNode;
   pageContent?: ReactNode; // Optional: if provided, this will be the animated content
 }
 

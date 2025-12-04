@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ const pageVariants = {
     filter: 'blur(0px)',
     transition: {
       duration: 1.2,
-      ease: [0.25, 0.1, 0.25, 1], // Custom easing for smooth cinematic feel
+      ease: [0.25, 0.1, 0.25, 1] as const, // Custom easing for smooth cinematic feel
     },
   },
   exit: {
@@ -27,7 +27,7 @@ const pageVariants = {
     filter: 'blur(10px)',
     transition: {
       duration: 0.8,
-      ease: [0.25, 0.1, 0.25, 1],
+      ease: [0.25, 0.1, 0.25, 1] as const,
     },
   },
 };
