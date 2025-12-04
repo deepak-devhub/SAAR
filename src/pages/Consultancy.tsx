@@ -52,6 +52,11 @@ export default function Consultancy() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.2,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
           >
             SAAR Engineering Consultancy
@@ -59,7 +64,11 @@ export default function Consultancy() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.4,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-xl md:text-2xl text-primary-100"
           >
             Innovative MEP Engineering Solutions
@@ -75,7 +84,10 @@ export default function Consultancy() {
             animate={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.4 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6 text-center">About Our Consultancy</h2>
             <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
@@ -118,7 +130,11 @@ export default function Consultancy() {
                 animate={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
-                transition={{ delay: index * 0.1, duration: 0.4 }}
+                transition={{ 
+                  delay: index * 0.1, 
+                  duration: 0.5, 
+                  ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+                }}
               >
                 <Card hover>
                   <div className="p-6">
@@ -150,7 +166,11 @@ export default function Consultancy() {
                 animate={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
-                transition={{ delay: index * 0.1, duration: 0.4 }}
+                transition={{ 
+                  delay: index * 0.1, 
+                  duration: 0.5, 
+                  ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+                }}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">

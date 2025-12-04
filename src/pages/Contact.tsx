@@ -19,6 +19,11 @@ export default function Contact() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.2,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
           >
             Contact Us
@@ -26,7 +31,11 @@ export default function Contact() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.4,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-xl md:text-2xl text-white/90"
           >
             Get in Touch with SAAR Group
@@ -43,7 +52,10 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.4 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
           >
             <h2 className="text-3xl font-bold text-gold-500 mb-6">Send Us a Message</h2>
             <p className="text-gray-300 mb-8">
@@ -58,7 +70,10 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.4 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
             className="space-y-8"
           >
             <div>

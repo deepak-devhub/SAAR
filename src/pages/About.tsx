@@ -38,6 +38,11 @@ export default function About() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.2,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
           >
             About SAAR Group
@@ -45,7 +50,11 @@ export default function About() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.4,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-xl md:text-2xl text-primary-100"
           >
             Engineering Excellence. Educating the Future.
@@ -61,7 +70,10 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.4 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
             className="prose prose-lg max-w-none"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6 text-center">
@@ -97,7 +109,10 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.4 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
           >
             <Card>
               <div className="p-8">
@@ -120,7 +135,10 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.4 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
           >
             <Card>
               <div className="p-8">
@@ -186,7 +204,11 @@ export default function About() {
                 animate={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
-                transition={{ delay: index * 0.1, duration: 0.4 }}
+                transition={{ 
+                  delay: index * 0.1, 
+                  duration: 0.5, 
+                  ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+                }}
               >
                 <Card>
                   <div className="p-6 text-center">

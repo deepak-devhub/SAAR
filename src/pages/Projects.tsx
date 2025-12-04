@@ -72,6 +72,11 @@ export default function Projects() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.2,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
           >
             Our Projects
@@ -79,7 +84,11 @@ export default function Projects() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.4,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-xl md:text-2xl text-white/90"
           >
             Showcasing Engineering Excellence
@@ -91,10 +100,19 @@ export default function Projects() {
       <Section>
         {/* Filter */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {['all', 'commercial', 'industrial'].map((filterType) => (
-            <button
+          {['all', 'commercial', 'industrial'].map((filterType, index) => (
+            <motion.button
               key={filterType}
               onClick={() => setFilter(filterType)}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.1,
+                ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+              }}
               className={`px-6 py-2 rounded-full font-medium transition-colors ${
                 filter === filterType
                   ? 'bg-primary-600 text-white'
@@ -102,7 +120,7 @@ export default function Projects() {
               }`}
             >
               {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
-            </button>
+            </motion.button>
           ))}
         </div>
 
@@ -115,7 +133,11 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
-              transition={{ delay: index * 0.1, duration: 0.4 }}
+              transition={{ 
+                delay: index * 0.1, 
+                duration: 0.5, 
+                ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+              }}
             >
               <Card hover className="h-full flex flex-col bg-secondary-900">
                 <div className="aspect-video bg-gradient-to-br from-primary-400 to-primary-600 relative overflow-hidden">

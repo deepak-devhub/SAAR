@@ -71,6 +71,11 @@ export default function Academy() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.2,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
           >
             SAAR MEP Academy
@@ -78,7 +83,11 @@ export default function Academy() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.4,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-xl md:text-2xl text-secondary-100"
           >
             World-Class Technical Training
@@ -94,7 +103,10 @@ export default function Academy() {
             animate={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.4 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6 text-center">About SAAR MEP Academy</h2>
             <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
@@ -136,7 +148,11 @@ export default function Academy() {
               animate={{ opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
-              transition={{ delay: index * 0.05, duration: 0.4 }}
+              transition={{ 
+                delay: index * 0.05, 
+                duration: 0.5, 
+                ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+              }}
               className="h-full"
             >
               <Card hover className='bg-secondary-900 h-full flex flex-col'>
@@ -170,7 +186,11 @@ export default function Academy() {
                 animate={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
-                transition={{ delay: index * 0.1, duration: 0.4 }}
+                transition={{ 
+                  delay: index * 0.1, 
+                  duration: 0.5, 
+                  ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+                }}
                 className="text-center"
               >
                 <div className="w-20 h-20 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -222,7 +242,10 @@ export default function Academy() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.3 }}
+              transition={{ 
+                duration: 0.5, 
+                ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+              }}
               className="bg-secondary-900 rounded-2xl shadow-xl p-8 md:p-12"
             >
               <Quote className="w-12 h-12 text-primary-600 mb-6" />

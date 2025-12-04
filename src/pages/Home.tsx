@@ -198,7 +198,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.4 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
             className="text-3xl md:text-4xl font-bold text-gold-500 mb-6"
           >
             About SAAR Group
@@ -208,7 +211,11 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ delay: 0.1, duration: 0.4 }}
+            transition={{ 
+              delay: 0.1, 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
             className="text-lg text-gray-300 leading-relaxed"
           >
             Founded by experienced MEP engineers, SAAR Group is a multidisciplinary organization 
@@ -243,7 +250,11 @@ export default function Home() {
                 animate={{ opacity: 1, y: 0 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
-                transition={{ delay: index * 0.1, duration: 0.4 }}
+                transition={{ 
+                  delay: index * 0.1, 
+                  duration: 0.5, 
+                  ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+                }}
                 className="text-center"
               >
                 <div className="w-20 h-20 mx-auto mb-4 bg-gold-900/20 rounded-full flex items-center justify-center border border-gold-700/30">

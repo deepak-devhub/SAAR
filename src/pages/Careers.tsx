@@ -60,6 +60,11 @@ export default function Careers() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.2,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
           >
             Join Our Growing Team
@@ -67,7 +72,11 @@ export default function Careers() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.4,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-xl md:text-2xl text-white/90"
           >
             Build Your Career with SAAR Group
@@ -83,7 +92,10 @@ export default function Careers() {
             animate={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.4 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6">
               Why Work with SAAR Group?
@@ -131,7 +143,11 @@ export default function Careers() {
               animate={{ opacity: 1, y: 0 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-100px' }}
-              transition={{ delay: index * 0.1, duration: 0.4 }}
+              transition={{ 
+                delay: index * 0.1, 
+                duration: 0.5, 
+                ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+              }}
             >
               <Card hover className='bg-secondary-900'>
                 <div className="p-8">
@@ -171,7 +187,10 @@ export default function Careers() {
             animate={{ opacity: 1, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
-            transition={{ duration: 0.4 }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
           >
             <div className="bg-gradient-to-br rounded-2xl p-12">
               <Mail className="w-16 h-16 text-primary-600 mx-auto mb-6" />

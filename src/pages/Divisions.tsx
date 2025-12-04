@@ -13,6 +13,11 @@ export default function Divisions() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.2,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
           >
             Our Divisions
@@ -20,7 +25,11 @@ export default function Divisions() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.4,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches Home page
+            }}
             className="text-xl md:text-2xl text-white/90"
           >
             Two powerful divisions, one shared vision
@@ -30,16 +39,48 @@ export default function Divisions() {
 
       <Section background="primary">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ 
+              duration: 0.5, 
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
+            className="text-3xl md:text-4xl font-bold text-gold-500 mb-4"
+          >
             Our Divisions
-          </h2>
-          <p className="text-lg text-gray-300">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.1,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
+            className="text-lg text-gray-300"
+          >
             Two powerful divisions working together to deliver excellence
-          </p>
+          </motion.p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <Link to="/consultancy">
-            <Card hover className="h-full">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.2,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
+          >
+            <Link to="/consultancy">
+              <Card hover className="h-full">
               <div className="aspect-video bg-gradient-to-br from-primary-600 to-primary-800 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center text-gray-200 p-8">
                   <div className="text-center">
@@ -60,10 +101,22 @@ export default function Divisions() {
                 </div>
               </div>
             </Card>
-          </Link>
+            </Link>
+          </motion.div>
 
-          <Link to="/academy">
-            <Card hover className="h-full">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ 
+              duration: 0.5, 
+              delay: 0.3,
+              ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+            }}
+          >
+            <Link to="/academy">
+              <Card hover className="h-full">
               <div className="aspect-video bg-gradient-to-br from-primary-600 to-primary-800 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center text-gray-200 p-8">
                   <div className="text-center">
@@ -84,7 +137,8 @@ export default function Divisions() {
                 </div>
               </div>
             </Card>
-          </Link>
+            </Link>
+          </motion.div>
         </div>
       </Section>
 

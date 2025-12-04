@@ -60,7 +60,7 @@ function PageContentWrapper({ children, pathname }: { children: ReactNode; pathn
       if (element) {
         (element as HTMLElement).style.opacity = '1';
       }
-    }, 300);
+    }, 500);
     return () => clearTimeout(timer);
   }, [pathname]);
 
@@ -69,7 +69,10 @@ function PageContentWrapper({ children, pathname }: { children: ReactNode; pathn
       key={pathname}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.15 }}
+      transition={{ 
+        duration: 0.5, 
+        ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
+      }}
       data-page-content={pathname}
       className="flex-grow"
     >
