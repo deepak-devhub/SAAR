@@ -42,8 +42,8 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
   };
 
   return (
-    <div className="relative max-w-7xl mx-auto px-4">
-      <div className="relative h-[320px] overflow-hidden">
+    <div className="relative max-w-7xl mx-auto px-4 py-4">
+      <div className="relative h-[320px] overflow-visible">
         <div className="relative h-full w-full">
           {visibleTestimonials.map((testimonial, cardIndex) => {
             const position = getCardPosition(cardIndex);
@@ -74,6 +74,10 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
                   opacity: 1,
                   zIndex: isMiddle ? 10 : position === 0 ? 1 : 2,
                 }}
+                whileHover={{
+                  scale: 1.05,
+                  zIndex: 20,
+                }}
                 transition={{
                   left: {
                     type: 'spring',
@@ -81,10 +85,15 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
                     damping: 25,
                     mass: 0.8,
                   },
+                  scale: {
+                    type: 'spring',
+                    stiffness: 300,
+                    damping: 20,
+                  },
                 }}
                 className="absolute w-[calc(33.333%-1rem)] h-full"
               >
-                <div className="bg-gray-900 rounded-2xl shadow-xl p-6 md:p-8 h-full w-full flex flex-col min-h-0">
+                <div className="bg-gray-900 rounded-2xl shadow-xl border border-gray-700 p-6 md:p-8 h-full w-full flex flex-col min-h-0">
                   <Quote className="w-10 h-10 min-w-[2.5rem] min-h-[2.5rem] text-primary-600 mb-4 flex-shrink-0" />
                   <p className="text-base md:text-lg text-white mb-2 leading-relaxed">
                     "{testimonial.text}"
@@ -110,7 +119,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
         </div>
       </div>
 
-      <div className="flex justify-center items-center gap-4 mt-8">
+      {/* <div className="flex justify-center items-center gap-4 mt-8">
         <button
           onClick={prev}
           className="group p-2 rounded-full bg-gray-900 shadow-md hover:bg-primary-600 transition-colors"
@@ -140,7 +149,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
         >
           <ChevronRight className="w-6 h-6 text-primary-600 group-hover:text-white transition-colors" />
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
