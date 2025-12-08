@@ -139,19 +139,19 @@ export default function Home() {
             Two powerful divisions working together to deliver excellence
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto ">
           <Link to="/consultancy">
-            <Card hover className="h-full">
+            <Card hover className="h-full ">
               <div className="aspect-video bg-gradient-to-br from-primary-600 to-primary-800 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center text-gray-200 p-8">
-                  <div className="text-center">
+                  <div className="text-center ">
                     <Building2 className="w-16 h-16 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold mb-2">SAAR Engineering Consultancy</h3>
                     <p className="text-gray-200">Innovative MEP Solutions</p>
                   </div>
                 </div>
               </div>
-              <div className="p-6 bg-gray-900">
+              <div className="p-6 bg-secondary-900">
                 <p className="text-gray-300 mb-4">
                   A full-service MEP design consultancy offering HVAC, Electrical, Plumbing, and Fire Fighting 
                   design services for residential, commercial, and industrial projects.
@@ -165,7 +165,7 @@ export default function Home() {
           </Link>
 
           <Link to="/academy">
-            <Card hover className="h-full">
+            <Card hover className="h-full bg-secondary-900">
               <div className="aspect-video bg-gradient-to-br from-primary-600 to-primary-800 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center text-gray-200 p-8">
                   <div className="text-center">
@@ -175,7 +175,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="p-6 bg-gray-900">
+              <div className="p-6">
                 <p className="text-gray-300 mb-4">
                   A professional training institute providing job-oriented MEP design and drafting programs 
                   for engineers and technicians.
@@ -308,7 +308,7 @@ export default function Home() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="h-24 bg-gray-900 rounded-lg flex items-center justify-center border border-gold-800/20"
+              className="h-24 bg-secondary-900 rounded-lg flex items-center justify-center border border-gold-800/20"
             >
               <span className="text-gold-400 font-semibold text-lg">{client}</span>
             </motion.div>

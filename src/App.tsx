@@ -12,6 +12,7 @@ import Academy from './pages/Academy';
 import Projects from './pages/Projects';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import GlobalClickSpark from './components/ui/GlobalClickSpark';
 
 const pageVariants = {
   initial: {
@@ -135,6 +136,12 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
+      <GlobalClickSpark 
+        sparkColor="#f4c430" 
+        sparkCount={12}
+        sparkRadius={25}
+        duration={600}
+      />
       <AnimatedRoutes />
     </Router>
   );

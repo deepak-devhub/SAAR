@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
   BookOpen, Users, Briefcase, Award, 
-  ArrowRight, FileText, ChevronLeft, ChevronRight, Quote
+  ArrowRight, FileText
 } from 'lucide-react';
 import Section from '../components/ui/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import TestimonialSlider from '../components/ui/TestimonialSlider';
 
 const courses = [
   { title: 'Professional Diploma in MEP Design', duration: '12 Months' },
@@ -53,16 +53,6 @@ const studentTestimonials = [
 ];
 
 export default function Academy() {
-  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
-
-  const nextTestimonial = () => {
-    setCurrentTestimonialIndex((prev) => (prev + 1) % studentTestimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentTestimonialIndex((prev) => (prev - 1 + studentTestimonials.length) % studentTestimonials.length);
-  };
-
   return (
     <>
       {/* Hero Section */}
@@ -96,7 +86,7 @@ export default function Academy() {
       </section>
 
       {/* Intro Section */}
-      <Section>
+      <Section >
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -133,7 +123,7 @@ export default function Academy() {
       </Section>
 
       {/* Courses Grid */}
-      <Section background="gray">
+      <Section background="primary">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-4">Our Courses</h2>
           <p className="text-lg text-gray-300">
@@ -205,7 +195,7 @@ export default function Academy() {
       </Section>
 
             {/* CTAs */}
-            <Section background="gray">
+            <Section background="primary">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-6">
             Start Your Journey Today
@@ -231,73 +221,11 @@ export default function Academy() {
       </Section>
 
       {/* Testimonials */}
-      <Section >
+      <Section>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-4">Student Testimonials</h2>
         </div>
-        <div className="relative max-w-4xl mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentTestimonialIndex}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ 
-                duration: 0.5, 
-                ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
-              }}
-              className="bg-secondary-900 rounded-2xl shadow-xl p-8 md:p-12"
-            >
-              <Quote className="w-12 h-12 text-primary-600 mb-6" />
-              <p className="text-lg md:text-xl text-white mb-6 leading-relaxed">
-                "{studentTestimonials[currentTestimonialIndex].text}"
-              </p>
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="font-semibold text-gray-400">
-                    {studentTestimonials[currentTestimonialIndex].name}
-                  </p>
-                  <p className="text-sm text-gray-400">
-                    {studentTestimonials[currentTestimonialIndex].role}
-                  </p>
-                </div>
-                <span className="px-3 py-1 bg-gray-200 text-black rounded-full text-xs font-medium">
-                  Student
-                </span>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Navigation Buttons - You can style these manually */}
-          <div className="flex justify-center items-center gap-4 mt-8">
-            <button
-              onClick={prevTestimonial}
-              className="group p-2 rounded-full bg-secondary-900 shadow-md hover:bg-gold-500 transition-colors"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="w-6 h-6 text-primary-600 group-hover:text-black transition-colors" />
-            </button>
-            <div className="flex gap-2">
-              {studentTestimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentTestimonialIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentTestimonialIndex ? 'bg-gold-500 w-8' : 'bg-gray-300'
-                  }`}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                />
-              ))}
-            </div>
-            <button
-              onClick={nextTestimonial}
-              className="group p-2 rounded-full bg-secondary-900 shadow-md hover:bg-gold-500 transition-colors"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="w-6 h-6 text-primary-600 group-hover:text-black transition-colors" />
-            </button>
-          </div>
-        </div>
+        <TestimonialSlider testimonials={studentTestimonials} />
       </Section>
 
 

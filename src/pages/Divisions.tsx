@@ -90,7 +90,7 @@ export default function Divisions() {
                   </div>
                 </div>
               </div>
-              <div className="p-6 bg-gray-900">
+              <div className="p-6 bg-secondary-900">
                 <p className="text-gray-300 mb-4">
                   A full-service MEP design consultancy offering HVAC, Electrical, Plumbing, and Fire Fighting 
                   design services for residential, commercial, and industrial projects.
@@ -116,7 +116,7 @@ export default function Divisions() {
             }}
           >
             <Link to="/academy">
-              <Card hover className="h-full">
+              <Card hover className="h-full bg-secondary-900">
               <div className="aspect-video bg-gradient-to-br from-primary-600 to-primary-800 relative overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center text-gray-200 p-8">
                   <div className="text-center">
@@ -126,7 +126,7 @@ export default function Divisions() {
                   </div>
                 </div>
               </div>
-              <div className="p-6 bg-gray-900">
+              <div className="p-6">
                 <p className="text-gray-300 mb-4">
                   A professional training institute providing job-oriented MEP design and drafting programs 
                   for engineers and technicians.

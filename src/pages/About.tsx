@@ -115,7 +115,7 @@ export default function About() {
             }}
           >
             <Card>
-              <div className="p-8">
+              <div className="p-8 bg-secondary-900">
                 <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
                   <Target className="w-8 h-8 text-primary-600" />
                 </div>
@@ -141,7 +141,7 @@ export default function About() {
             }}
           >
             <Card>
-              <div className="p-8">
+              <div className="p-8 bg-secondary-900">
                 <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mb-6">
                   <Rocket className="w-8 h-8 text-secondary-600" />
                 </div>
@@ -160,9 +160,9 @@ export default function About() {
 
       {/* Director's Message */}
       <Section>
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto ">
           <Card>
-            <div className="md:flex gap-8 p-8">
+            <div className="md:flex gap-8 p-8 bg-secondary-900">
               <div className="flex-shrink-0 mb-6 md:mb-0">
                 <div className="w-32 h-32 bg-gradient-to-br from-primary-700 to-primary-600 rounded-full flex items-center justify-center text-white text-4xl font-bold">
                   DM
@@ -194,7 +194,7 @@ export default function About() {
             Our Core Values
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto ">
           {coreValues.map((value, index) => {
             const Icon = value.icon;
             return (
@@ -211,7 +211,7 @@ export default function About() {
                 }}
               >
                 <Card>
-                  <div className="p-6 text-center">
+                  <div className="p-6 text-center bg-secondary-900">
                     <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Icon className="w-8 h-8 text-primary-600" />
                     </div>

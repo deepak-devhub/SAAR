@@ -77,7 +77,7 @@ export default function Consultancy() {
       </section>
 
       {/* About Section */}
-      <Section>
+      <Section background="primary">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -113,7 +113,7 @@ export default function Consultancy() {
       </Section>
 
       {/* Services Grid */}
-      <Section background="gray">
+      <Section background="primary">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gold-500 mb-4">Our Services</h2>
           <p className="text-lg text-gray-300">
@@ -137,7 +137,7 @@ export default function Consultancy() {
                 }}
               >
                 <Card hover>
-                  <div className="p-6">
+                  <div className="p-6 bg-secondary-900">
                     <div className="w-14 h-14 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                       <Icon className="w-7 h-7 text-primary-600" />
                     </div>
