@@ -73,7 +73,7 @@ export default function Landing() {
         style={{ height: '100vh', width: '100vw' }}
       />
       
-      <div className="relative w-full max-w-4xl px-8">
+      <div className="relative w-full max-w-4xl px-4 sm:px-6 md:px-8">
         {/* Logo Container */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8, y: 50 }}
@@ -108,7 +108,7 @@ export default function Landing() {
             transition={{ delay: 0.3, duration: 1 }}
           >
             <h1 
-              className="text-7xl md:text-8xl lg:text-9xl xl:text-[12rem] font-bold mb-4 tracking-tight relative inline-block"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] font-bold mb-2 sm:mb-3 md:mb-4 tracking-tight relative inline-block"
               style={{ 
                 color: '#333',
               }}
@@ -154,9 +154,9 @@ export default function Landing() {
                 </motion.span>
               </motion.span>
             </h1>
-            <div className="flex items-center justify-center gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-1 sm:gap-2 md:gap-3">
               <motion.span 
-                className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-wide relative inline-block"
+                className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold tracking-wide relative inline-block whitespace-nowrap"
                 style={{ color: '#333' }}
               >
                 <span className="relative z-10">GROUP OF</span>
@@ -199,20 +199,7 @@ export default function Landing() {
                 </motion.span>
               </motion.span>
               <motion.span 
-                className="text-3xl md:text-4xl lg:text-5xl"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ 
-                  delay: 0.5, 
-                  duration: 4, 
-                  ease: [0.25, 0.1, 0.25, 1] // Custom easing for realistic loading feel
-                }}
-                style={{ color: '#d4af37' }}
-              >
-                
-              </motion.span>
-              <motion.span 
-                className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold tracking-wide relative inline-block"
+                className="text-sm sm:text-base md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold tracking-wide relative inline-block whitespace-nowrap"
                 style={{ color: '#333' }}
               >
                 <span className="relative z-10">COMPANIES</span>
