@@ -25,7 +25,7 @@ export default function Header() {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 min-h-[80px]">
           {/* Logo */}
-          <Link to="/home" className="flex ms-4 items-center justify-center group flex-shrink-0 px-4 py-2">
+          <Link to="/home" className="flex items-center justify-center group flex-shrink-0">
             <motion.img
               src={logoImage}
               alt="SAAR MEP Academy"
@@ -69,7 +69,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-300 hover:text-gold-400 flex items-center justify-center flex-shrink-0"
+            className="lg:hidden px-2 rounded-md text-gray-300 hover:text-gold-400 flex items-center justify-center flex-shrink-0"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (

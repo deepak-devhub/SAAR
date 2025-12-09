@@ -69,10 +69,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
           {visibleTestimonials.map((testimonial, cardIndex) => {
             const position = getCardPosition(cardIndex);
             const isMiddle = position === 1;
-            const isActive = rotation === cardIndex; // For mobile: show only active card
-            
-            // Calculate the target left position for absolute positioning
-            // Desktop: show 3 cards side by side
+            const isActive = rotation === cardIndex; 
             let desktopLeft: string;
             if (position === 0) {
               desktopLeft = '0%';

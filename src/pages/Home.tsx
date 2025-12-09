@@ -234,7 +234,7 @@ export default function Home() {
             Core Strengths
           </h2>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
           {[
             { icon: Award, title: '15+ Years', subtitle: 'Experience' },
             { icon: Globe, title: 'UAE & India', subtitle: 'Projects' },
@@ -243,6 +243,7 @@ export default function Home() {
             { icon: CheckCircle, title: 'Quality, Integrity', subtitle: 'Innovation' },
           ].map((strength, index) => {
             const Icon = strength.icon;
+            const isLastItem = index === 4;
             return (
               <motion.div
                 key={strength.title}
@@ -255,13 +256,15 @@ export default function Home() {
                   duration: 0.5, 
                   ease: [0.25, 0.1, 0.25, 1] // Smooth cinematic easing - matches hero sections
                 }}
-                className="text-center"
+                className={`text-center ${isLastItem ? 'col-span-2 lg:col-span-1 flex justify-center' : ''}`}
               >
-                <div className="w-20 h-20 mx-auto mb-4 bg-gold-900/20 rounded-full flex items-center justify-center border border-gold-700/30">
-                  <Icon className="w-10 h-10 text-gold-500" />
+                <div className={`${isLastItem ? 'w-full max-w-xs' : ''}`}>
+                  <div className="w-20 h-20 mx-auto mb-4 bg-gold-900/20 rounded-full flex items-center justify-center border border-gold-700/30">
+                    <Icon className="w-10 h-10 text-gold-500" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gold-400 mb-1">{strength.title}</h3>
+                  <p className="text-gray-300">{strength.subtitle}</p>
                 </div>
-                <h3 className="text-xl font-bold text-gold-400 mb-1">{strength.title}</h3>
-                <p className="text-gray-300">{strength.subtitle}</p>
               </motion.div>
             );
           })}
