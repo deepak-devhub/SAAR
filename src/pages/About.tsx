@@ -142,8 +142,8 @@ export default function About() {
           >
             <Card>
               <div className="p-8 bg-secondary-900">
-                <div className="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mb-6">
-                  <Rocket className="w-8 h-8 text-secondary-600" />
+                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                  <Rocket className="w-8 h-8 text-primary-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gold-500 mb-4">Our Mission</h3>
                 <p className="text-gray-300 leading-relaxed">
